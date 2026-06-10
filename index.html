@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;1,400&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    :root[data-theme="ibis"]   {--bg:#DCF2EE;--bg-c:#EFFAF7;--bg-ch:#F8FFFD;--bg-g:rgba(0,90,70,.03);--bo:#9ECFC8;--boc:#B4E0D8;--tx:#0A2420;--txm:#2A5248;--txf:#68908A;--ac:#007868;--ach:#005A50;--am:#C88C00;--amb:rgba(200,140,0,.12);--te:#007868;--teb:rgba(0,120,104,.1);--hl:#007868;--hlbg:rgba(0,120,104,.07);--tag:#BCE4DA;--tagt:#1A4840;--sa:#007868;--se:#6A9080;--nb:#FFFBD0;--nbo:#D4A000;--nbt:#5A4000;--sh:0 1px 8px rgba(0,60,50,.1);--shh:0 3px 16px rgba(0,60,50,.16);}
-    :root[data-theme="pivot"]  {--bg:#A8B8C8;--bg-c:#B4C4D4;--bg-ch:#C0D0DE;--bg-g:rgba(0,0,0,.055);--bo:#7890A4;--boc:#8AA0B4;--tx:#080E18;--txm:#1E3044;--txf:#4A6078;--ac:#162840;--ach:#0A1A2E;--am:#C42060;--amb:rgba(196,32,96,.1);--te:#004468;--teb:rgba(0,68,104,.12);--hl:#162840;--hlbg:rgba(22,40,64,.1);--tag:#7A8EA0;--tagt:#080E18;--sa:#162840;--se:#4A5C68;--nb:rgba(196,32,96,.1);--nbo:rgba(196,32,96,.45);--nbt:#900040;--sh:0 1px 8px rgba(0,16,36,.16);--shh:0 3px 16px rgba(0,16,36,.24);}
+    :root[data-theme="ibis"]   {--bg:#DCF2EE;--bg-c:#EFFAF7;--bg-ch:#F8FFFD;--bg-g:rgba(0,90,70,.03);--bo:#9ECFC8;--boc:#B4E0D8;--tx:#0A2420;--txm:#2A5248;--txf:#68908A;--ac:#007868;--ach:#005A50;--am:#A87400;--amb:rgba(200,140,0,.12);--te:#007868;--teb:rgba(0,120,104,.1);--hl:#007868;--hlbg:rgba(0,120,104,.07);--tag:#BCE4DA;--tagt:#1A4840;--sa:#007868;--se:#6A9080;--nb:#FFFBD0;--nbo:#D4A000;--nbt:#5A4000;--sh:0 1px 8px rgba(0,60,50,.1);--shh:0 3px 16px rgba(0,60,50,.16);}
+    :root[data-theme="pivot"]  {--bg:#A8B8C8;--bg-c:#B4C4D4;--bg-ch:#C0D0DE;--bg-g:rgba(0,0,0,.055);--bo:#7890A4;--boc:#8AA0B4;--tx:#080E18;--txm:#1E3044;--txf:#4A6078;--ac:#162840;--ach:#0A1A2E;--am:#A01850;--amb:rgba(160,24,80,.1);--te:#004468;--teb:rgba(0,68,104,.12);--hl:#162840;--hlbg:rgba(22,40,64,.1);--tag:#7A8EA0;--tagt:#080E18;--sa:#162840;--se:#4A5C68;--nb:rgba(160,24,80,.1);--nbo:rgba(160,24,80,.45);--nbt:#80103C;--sh:0 1px 8px rgba(0,16,36,.16);--shh:0 3px 16px rgba(0,16,36,.24);}
     :root[data-theme="evil"]   {--bg:#111520;--bg-c:#1A2030;--bg-ch:#222B3C;--bg-g:rgba(255,255,255,.025);--bo:#2C3848;--boc:#283244;--tx:#E2DDD4;--txm:#8898B0;--txf:#556070;--ac:#E83838;--ach:#FF5050;--am:#F0AC28;--amb:rgba(240,172,40,.1);--te:#30C8A8;--teb:rgba(48,200,168,.1);--hl:#E83838;--hlbg:rgba(232,56,56,.07);--tag:#243040;--tagt:#A0B8D0;--sa:#E83838;--se:#6A7888;--nb:rgba(240,172,40,.1);--nbo:rgba(240,172,40,.4);--nbt:#E0C068;--sh:0 1px 12px rgba(0,0,0,.4);--shh:0 3px 20px rgba(0,0,0,.6);}
 
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -34,20 +34,30 @@
     .bio-text p{font-size:12px;line-height:1.6;color:var(--txm);max-width:720px}
     .bio-text h2{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--txm);margin-bottom:5px}
     .bio-links{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
-    .bio-link{font-family:'Space Mono',monospace;font-size:9px;color:var(--ac);border:1px solid rgba(74,154,255,.3);padding:3px 9px;border-radius:4px;transition:all .2s}
-    :root[data-theme="ibis"] .bio-link{border-color:rgba(0,120,104,.3)}
-    :root[data-theme="pivot"] .bio-link{border-color:rgba(22,40,64,.35)}
-    :root[data-theme="evil"] .bio-link{border-color:rgba(232,56,56,.3)}
-    .bio-link:hover{text-decoration:none;background:var(--hlbg)}
+    .bio-link{font-family:'Space Mono',monospace;font-size:9px;color:var(--ac);border:1px solid var(--boc);padding:3px 9px;border-radius:4px;transition:all .2s}
+    .bio-link:hover{text-decoration:none;background:var(--hlbg);border-color:var(--ac)}
+
+    /* ── EXPIRY CALLOUT BANNER ── */
+    .expiry-banner{margin:14px 20px 0;border:1px solid var(--hl);border-left:4px solid var(--hl);border-radius:8px;background:var(--hlbg);padding:12px 16px;box-shadow:var(--sh)}
+    .eb-title{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--ac);margin-bottom:4px}
+    .eb-main{font-size:12.5px;line-height:1.6;color:var(--tx);max-width:780px}
+    .eb-main strong{color:var(--ac)}
+    .eb-next{margin-top:8px;font-family:'Space Mono',monospace;font-size:10px;color:var(--txm);line-height:1.7}
+    .eb-next .nx-id{color:var(--ac);font-weight:700}
 
     .filters-bar{padding:12px 20px 8px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
     .subcat-pills{display:flex;flex-wrap:wrap;gap:5px}
     .pill{background:var(--tag);color:var(--tagt);border:1px solid var(--boc);border-radius:20px;padding:3px 11px;font-size:10px;font-family:'Barlow Condensed',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;cursor:pointer;transition:all .2s;white-space:nowrap}
     .pill.active{background:var(--ac);color:#fff;border-color:var(--ac)}
+    :root[data-theme="ibis"] .pill.active,:root[data-theme="pivot"] .pill.active{color:#fff}
     .pill:hover:not(.active){border-color:var(--ac);color:var(--ac)}
-    .stats-bar{padding:0 20px 10px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
-    .stat-item{display:flex;align-items:center;gap:5px;font-family:'Space Mono',monospace;font-size:10px}
+    .stats-bar{padding:0 20px 10px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+    .stat-item{display:flex;align-items:center;gap:5px;font-family:'Space Mono',monospace;font-size:10px;border:1px solid transparent;border-radius:5px;padding:3px 8px;transition:all .2s}
+    .stat-item.clickable{cursor:pointer}
+    .stat-item.clickable:hover{border-color:var(--ac);background:var(--hlbg)}
+    .stat-item.filter-on{border-color:var(--ac);background:var(--hlbg);box-shadow:0 0 0 1px var(--ac)}
     .sn{color:var(--tx);font-weight:700}.sl{color:var(--txm)}
+    .grouped-note{font-family:'Space Mono',monospace;font-size:9px;color:var(--txf)}
     .dot-a{width:7px;height:7px;border-radius:50%;background:var(--sa)}
     .dot-e{width:7px;height:7px;border-radius:50%;border:2px solid var(--se)}
     .dot-p{width:7px;height:7px;transform:rotate(45deg);border-radius:2px;background:var(--am)}
@@ -57,11 +67,561 @@
     .search-wrap input:focus{border-color:var(--ac)}
     .si{position:absolute;left:7px;top:50%;transform:translateY(-50%);color:var(--txf);font-size:12px;pointer-events:none}
 
-    /* ── GRID ── */
     .patent-grid{padding:0 20px 40px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
     .year-marker{grid-column:1/-1;font-family:'Space Mono',monospace;font-size:10px;font-weight:700;letter-spacing:2px;color:var(--txf);text-transform:uppercase;padding:6px 0 3px;border-bottom:1px solid var(--bo)}
     .empty-state{grid-column:1/-1;text-align:center;padding:50px 20px;color:var(--txf);font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:500;letter-spacing:1px;text-transform:uppercase}
 
+    .patent-card{background:var(--bg-c);border:1px solid var(--boc);border-radius:8px;overflow:hidden;box-shadow:var(--sh);transition:all .22s;display:flex;flex-direction:column}
+    .patent-card:hover{background:var(--bg-ch);transform:translateY(-1px);box-shadow:var(--shh)}
+    .patent-card.hl{border-color:var(--hl);background:var(--hlbg);box-shadow:var(--sh),0 0 0 1px var(--hl)}
+    .patent-card.flash{animation:flashCard 1.6s ease}
+    @keyframes flashCard{0%,60%{box-shadow:0 0 0 3px var(--ac)}100%{box-shadow:var(--sh)}}
+    .cat-rear{border-left:3px solid #E8A020}
+    .cat-front{border-left:3px solid #4A9AFF}
+    .cat-drivetrain{border-left:3px solid #30C8A8}
+    .cat-design{border-left:3px solid #B898E8}
+    .card-body{padding:11px 13px 9px;flex:1;display:flex;flex-direction:column}
+    .card-top-row{display:flex;align-items:flex-start;justify-content:space-between;gap:6px;margin-bottom:6px}
+    .pnum{font-family:'Space Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.4px;color:var(--ac);line-height:1.2}
+    .sbadge{display:inline-flex;align-items:center;gap:3px;font-family:'Space Mono',monospace;font-size:8.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:2px 6px;border-radius:3px;white-space:nowrap;flex-shrink:0}
+    .sbadge.active{color:var(--sa);background:var(--hlbg);border:1px solid var(--ac)}
+    .sbadge.expired{color:var(--se);background:rgba(128,128,128,.07);border:1px solid rgba(128,128,128,.25)}
+    .sbadge.pending{color:var(--am);background:var(--amb);border:1px solid var(--am)}
+    .pbadge{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:2px 7px;border-radius:3px;margin-bottom:5px}
+    .plat-dw{background:rgba(0,82,160,.12);color:var(--ac);border:1px solid var(--boc)}
+    :root[data-theme="evil"] .plat-dw{background:rgba(74,154,255,.08);color:#6ABAFF;border-color:rgba(74,154,255,.22)}
+    .plat-split{background:var(--amb);color:var(--am);border:1px solid var(--am)}
+    .plat-delta{background:rgba(180,0,100,.1);color:#C0407C;border:1px solid rgba(180,0,100,.25)}
+    :root[data-theme="evil"] .plat-delta{color:#F070A8}
+    :root[data-theme="pivot"] .plat-delta{color:#80103C;border-color:rgba(128,16,60,.4)}
+    .plat-orion{background:var(--teb);color:var(--te);border:1px solid var(--te)}
+    .plat-trust{background:rgba(120,60,200,.1);color:#6A38B8;border:1px solid rgba(120,60,200,.3)}
+    :root[data-theme="evil"] .plat-trust{color:#C898FF;border-color:rgba(180,120,255,.3);background:rgba(140,80,240,.1)}
+    :root[data-theme="pivot"] .plat-trust{color:#3A2070;border-color:rgba(58,32,112,.4)}
+    .plat-specialized{background:var(--hlbg);color:var(--ac);border:1px solid var(--boc)}
+    .plat-drivetrain{background:rgba(100,80,0,.1);color:#705C10;border:1px solid rgba(160,128,0,.3)}
+    :root[data-theme="evil"] .plat-drivetrain{color:#D0B840;border-color:rgba(220,190,60,.3);background:rgba(160,130,0,.12)}
+    .plat-design{background:var(--tag);color:var(--tagt);border:1px solid var(--boc)}
+    .ctitle{font-family:'Barlow Condensed',sans-serif;font-size:13.5px;font-weight:600;line-height:1.25;color:var(--tx);margin-bottom:1px}
+    .sublbl{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-style:italic;color:var(--am);margin-bottom:6px}
+    .brands{display:flex;flex-wrap:wrap;gap:3px;margin:4px 0 8px}
+    .bpill{font-size:9px;font-family:'Barlow Condensed',sans-serif;font-weight:600;background:var(--tag);color:var(--tagt);border:1px solid var(--boc);padding:2px 7px;border-radius:2px}
+    .mt{width:100%;border-collapse:collapse;margin:3px 0 8px}
+    .mt td{padding:2px 0;font-size:11px;vertical-align:top;line-height:1.3}
+    .mt td:first-child{font-family:'Space Mono',monospace;font-size:8px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--txm);width:72px;padding-right:6px;padding-top:4px}
+    .mt td:last-child{color:var(--tx)}
+    .cdown{display:inline-flex;align-items:center;font-family:'Space Mono',monospace;font-size:8px;font-weight:700;margin-left:6px;padding:1px 5px;border-radius:3px;vertical-align:middle}
+    .cdown.future{background:var(--hlbg);color:var(--ac);border:1px solid var(--ac)}
+    .cdown.soon{background:var(--amb);color:var(--am);border:1px solid var(--am)}
+    .cdown.expired-inline{background:rgba(128,128,128,.1);color:var(--se);border:1px solid rgba(128,128,128,.25)}
+    .csum{font-size:11.5px;line-height:1.55;color:var(--txm);flex:1;margin-bottom:8px}
+    .card-note{background:var(--nb);border:1px solid var(--nbo);border-radius:4px;padding:6px 9px;font-size:10.5px;color:var(--nbt);line-height:1.5;margin-bottom:8px}
+    .ast-note{background:rgba(128,128,128,.07);border:1px solid rgba(128,128,128,.22);border-radius:4px;padding:6px 9px;font-size:10px;color:var(--txm);line-height:1.5;margin-bottom:8px;font-style:italic}
+    .ext-box{background:var(--teb);border:1px solid var(--te);border-radius:4px;padding:5px 9px;font-size:10px;margin-bottom:8px}
+    .ext-box a{color:var(--te);font-family:'Space Mono',monospace;font-size:9px}
+    .card-footer{border-top:1px solid var(--boc);padding:8px 13px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .btn-p{display:inline-flex;align-items:center;gap:4px;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--ac);border:1px solid var(--boc);background:none;padding:4px 10px;border-radius:4px;text-decoration:none;transition:all .2s}
+    .btn-p:hover{background:var(--hlbg);text-decoration:none;border-color:var(--ac)}
+    .related-section{border-top:1px solid var(--boc);padding:8px 13px}
+    .related-toggle{background:none;border:none;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--txm);padding:0;display:flex;align-items:center;gap:5px;transition:color .2s}
+    .related-toggle:hover{color:var(--ac)}
+    .related-list{margin-top:7px;display:flex;flex-direction:column;gap:3px}
+    .rel-item{font-size:10px;font-family:'Space Mono',monospace;color:var(--txm);padding:3px 0;border-bottom:1px solid var(--boc);line-height:1.4}
+    .rel-item a{font-size:10px;color:var(--ac)}
+    .rel-note{font-style:italic;color:var(--am);margin-left:4px}
+
+    #timeline-view{display:none;padding:16px 20px 40px}
+    #timeline-view.active{display:block}
+    .tl-legend{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:18px;align-items:center}
+    .tl-legend-item{display:flex;align-items:center;gap:6px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--txm)}
+    .tl-swatch{width:14px;height:10px;border-radius:2px}
+    .tl-wrap{overflow-x:auto;border:1px solid var(--bo);border-radius:8px;background:var(--bg-c);padding:16px 10px;box-shadow:var(--sh)}
+    .tl-wrap svg{display:block;min-width:760px}
+    .tl-hist-wrap{overflow-x:auto;border:1px solid var(--bo);border-radius:8px;background:var(--bg-c);padding:16px 10px;box-shadow:var(--sh);margin-bottom:16px}
+    .tl-hist-wrap svg{display:block;min-width:600px}
+    .tl-head{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--txm);margin-bottom:10px}
+    .tl-hint{font-family:'Space Mono',monospace;font-size:9px;color:var(--txf);margin-bottom:8px}
+    .gantt-bar{cursor:pointer}
+    .gantt-bar:hover{opacity:1 !important}
+
+    .site-footer{border-top:1px solid var(--bo);padding:14px 20px;text-align:center;font-family:'Space Mono',monospace;font-size:9px;color:var(--txf);letter-spacing:.5px;line-height:1.7}
+    .site-footer span{color:var(--txm)}
+
+    .scroll-top{position:fixed;bottom:20px;right:20px;background:var(--ac);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;box-shadow:0 3px 12px rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:opacity .3s;display:flex;align-items:center;justify-content:center;z-index:200;font-size:16px}
+    .scroll-top.show{opacity:1;pointer-events:all}
+    @media(max-width:560px){.patent-grid,.filters-bar,.stats-bar,.bio-strip,#timeline-view{padding-left:12px;padding-right:12px}.site-header{padding:0 12px}.expiry-banner{margin:12px 12px 0}}
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <div class="header-title-block">
+      <h1>Dave Weagle — Patent Portfolio</h1>
+      <div class="sub">MECHANICAL ENGINEER · SUSPENSION INNOVATOR · MARTHA'S VINEYARD, MA</div>
+    </div>
+    <div class="theme-switcher">
+      <button class="theme-btn" onclick="setTheme('ibis')">Ibis</button>
+      <button class="theme-btn" onclick="setTheme('pivot')">Pivot</button>
+      <button class="theme-btn active" onclick="setTheme('evil')">Evil</button>
+    </div>
+  </div>
+  <div class="tabs-row" id="tabs-row">
+    <button class="tab-btn active" data-cat="all">All Patents</button>
+    <button class="tab-btn" data-cat="rear">Rear Suspension</button>
+    <button class="tab-btn" data-cat="front">Front Suspension</button>
+    <button class="tab-btn" data-cat="drivetrain">Drivetrain</button>
+    <button class="tab-btn" data-cat="design">Design Patents</button>
+    <button class="tab-btn" data-cat="timeline">Timeline</button>
+  </div>
+</header>
+
+<div class="bio-strip">
+  <div class="bio-text">
+    <h2>About Dave Weagle</h2>
+    <p>Mechanical engineer (Wentworth Institute of Technology) and co-founder of Evil Bikes and e*thirteen. Applied four-wheeled vehicle dynamics to chain-driven bicycles, producing the first published mathematical characterization of anti-squat and braking-squat. Key platforms: <strong>DW-Link (DW4 &amp; DW6)</strong>, <strong>Split Pivot</strong>, <strong>DELTA</strong>, <strong>Orion Dynamics</strong>, and the <strong>Trust/Trvstper</strong> linkage front fork.</p>
+    <div class="bio-links">
+      <a class="bio-link" href="https://freehub.com/articles/the-architect" target="_blank">↗ Freehub Profile</a>
+      <a class="bio-link" href="http://www.split-pivot.com/home.html" target="_blank">↗ split-pivot.com</a>
+      <a class="bio-link" href="https://www.bikeradar.com/features/tech/four-influential-suspension-designs-named-after-their-creators" target="_blank">↗ BikeRadar Feature</a>
+      <a class="bio-link" href="https://rmumtnculture.com/blogs/design/interview-with-dave-weagle" target="_blank">↗ RMU Interview</a>
+    </div>
+  </div>
+</div>
+
+<!-- Expiry callout banner -->
+<div class="expiry-banner" id="expiry-banner">
+  <div class="eb-title">⚑ Now Public Domain</div>
+  <div class="eb-main">
+    The core DW-Link patent (<strong>US7128329B2</strong>) — the foundational anti-squat positioning patent licensed to Iron Horse, Ibis, Pivot, and Turner — <strong>expired September 28, 2023</strong>. Its claimed suspension geometry is now public domain in the US: any manufacturer may legally produce designs covered by that patent's claims without a license. Note this applies to that specific patent's claims only — later DW-Link-related filings and the separate DW6 work may still be in force.
+  </div>
+  <div class="eb-next" id="eb-next"></div>
+</div>
+
+<div id="grid-controls">
+  <div class="filters-bar">
+    <div class="subcat-pills" id="subcat-pills"></div>
+    <div class="search-wrap"><span class="si">⌕</span><input type="text" id="search-input" placeholder="Search patents..."></div>
+  </div>
+  <div class="stats-bar" id="stats-bar"></div>
+</div>
+
+<div class="patent-grid" id="patent-grid"></div>
+
+<div id="timeline-view">
+  <div class="tl-legend" id="tl-legend"></div>
+  <div class="tl-head">Publications by Year</div>
+  <div class="tl-hist-wrap"><div id="tl-hist"></div></div>
+  <div class="tl-head">Patent Lifetime — Publication → Expiration</div>
+  <div class="tl-hint">Tip: click any bar to jump to those patents</div>
+  <div class="tl-wrap"><div id="tl-gantt"></div></div>
+</div>
+
+<footer class="site-footer">
+  <span>Compiled by redfoxrun · June 2026</span> — Info may contain mistakes. Patent status, expiration dates, and assignments should be independently verified at USPTO.gov.<br>
+  Catalog covers 38 US filings (27 cards + 11 grouped continuations) of the ~53 results indexed under David Weagle on Google Patents; the remainder are primarily international counterparts and component-industry filings.
+</footer>
+
+<button class="scroll-top" id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// ── SAFE STORAGE (sandboxed-iframe proof) ────────────────────────────────────
+function safeGet(k){ try{ return window.localStorage.getItem(k); }catch(e){ return null; } }
+function safeSet(k,v){ try{ window.localStorage.setItem(k,v); }catch(e){} }
+
+// ── CONSTANTS ────────────────────────────────────────────────────────────────
+const TRUST_PARENT = "US10549812B2";
+const PLATFORM_CLASS = {"DW-Link":"plat-dw","Split Pivot":"plat-split","DELTA System":"plat-delta","Orion Dynamics":"plat-orion","Trust / Trvstper":"plat-trust","Trust / Specialized":"plat-specialized","High-Pivot Drivetrain":"plat-drivetrain","Design":"plat-design"};
+const CAT_COLOR = { rear:'#E8A020', front:'#4A9AFF', drivetrain:'#30C8A8', design:'#B898E8' };
+const CAT_LABEL = { rear:'Rear Suspension', front:'Front Suspension', drivetrain:'Drivetrain', design:'Design Patents' };
+
+// ── DATES ────────────────────────────────────────────────────────────────────
+function parseExpiry(s){
+  if(!s||s.includes('TBD')||s.startsWith('~'))return null;
+  const m=s.match(/^([A-Za-z]{3})\s+(\d{1,2}),\s+(\d{4})/);
+  if(m){const M={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};return new Date(+m[3],M[m[1]],+m[2]);}
+  return null;
+}
+function getCountdown(d){
+  if(!d)return null;
+  const now=new Date();
+  if(d<=now)return{expired:true};
+  let y=d.getFullYear()-now.getFullYear(),mo=d.getMonth()-now.getMonth(),dd=d.getDate()-now.getDate();
+  if(dd<0){mo--;dd+=new Date(d.getFullYear(),d.getMonth(),0).getDate();}
+  if(mo<0){y--;mo+=12;}
+  const parts=[];
+  if(y>0)parts.push(y+'yr');
+  if(mo>0)parts.push(mo+'mo');
+  if(dd>=0&&parts.length<2)parts.push(dd+'d');
+  return{expired:false,text:parts.join(' '),soon:Math.floor((d-now)/864e5)<365};
+}
+function effectiveStatus(p){
+  const d=parseExpiry(p.expires);
+  if(d&&d<=new Date())return'expired';
+  return p.status;
+}
+function countdownHTML(p){
+  const d=parseExpiry(p.expires);
+  if(!d)return'';
+  const cd=getCountdown(d);
+  if(!cd)return'';
+  if(cd.expired)return'<span class="cdown expired-inline">EXPIRED</span>';
+  return `<span class="cdown ${cd.soon?'soon':'future'}">⏱ ${cd.text}</span>`;
+}
+
+// ── DATA ─────────────────────────────────────────────────────────────────────
+const PATENTS = [
+  {id:"US7048292B2",title:"Bicycle Suspension Systems",subLabel:null,platform:"DW-Link",category:"rear",subcat:"dw-link",status:"expired",filed:"Sep 24, 2004",published:"May 23, 2006",expires:"Sep 24, 2024",assignee:"DW-Link Inc.",brands:["Iron Horse","Pivot","Ibis","Turner"],link:"https://patents.google.com/patent/US7048292B2/en",summary:"Companion to the core DW-Link patent. Bicycle-specific implementations of four-bar linkage geometry with chain-driven axle-path characterization. US utility term runs 20 years from earliest non-provisional filing; if this filing claims earlier family priority, actual expiry may be earlier.",year:2006,highlight:false},
+  {id:"US7128329B2",title:"Vehicle Suspension Systems",subLabel:"DW-Link (DW4) — NOW PUBLIC DOMAIN",platform:"DW-Link",category:"rear",subcat:"dw-link",status:"expired",filed:"Sep 24, 2004",published:"Oct 31, 2006",expires:"Sep 28, 2023",assignee:"DW-Link Inc.",brands:["Iron Horse","Pivot","Ibis","Turner","Atherton (DW6)"],link:"https://patents.google.com/patent/US7128329B2/en",summary:"The landmark DW-Link patent — the world's first published mathematical characterization of chain-driven bicycle suspension. Introduced anti-squat and braking-squat as measurable curves plotted against compressive wheel travel. Dozens of subsequent patents cite this work.",year:2006,highlight:true,note:"LANDMARK — Expired September 28, 2023 (20-year term from 2003 priority). The claimed anti-squat geometry is now public domain in the US: any manufacturer may produce designs covered by these claims without a license. The DW6 six-bar evolution (Atherton Bikes; Pivot Phoenix flex-stay variant) is separate, later work."},
+  {id:"US7828314B2",title:"Vehicle Suspension Systems",subLabel:null,platform:"DW-Link",category:"rear",subcat:"dw-link",status:"expired",filed:"Sep 22, 2006",published:"Nov 9, 2010",expires:"Sep 24, 2024",assignee:"DW-Link Inc.",brands:["Iron Horse","Pivot","Ibis","Turner"],link:"https://patents.google.com/patent/US7828314B2/en",summary:"Continuation of the core DW-Link patent extending anti-squat and braking-squat characterization to additional four-bar configurations. As a continuation claiming 2004 family priority, its 20-year term runs from the parent's priority date — so it expired with the family (~2024), not 20 years from its own 2006 filing.",year:2010,highlight:false,asterisk:"Expiry shown is estimated from the 2004 family priority date. Continuations expire 20 years from earliest claimed priority, not from their own filing date. Verify exact adjusted date at USPTO."},
+  {id:"US7717212B2",title:"Split Pivot Suspension System",subLabel:"Split Pivot",platform:"Split Pivot",category:"rear",subcat:"split-pivot",status:"expired",filed:"Aug 25, 2006",published:"May 18, 2010",expires:"Nov 5, 2027",assignee:"Split Pivot Inc.",brands:["Devinci","Salsa","Rocky Mountain","Norco"],link:"https://patents.google.com/patent/US7717212B2/en",externalLink:"http://www.split-pivot.com/home.html",externalLabel:"split-pivot.com",summary:"Core Split Pivot patent. A concentric dropout pivot at the rear axle allows braking and acceleration forces to be independently tuned. Status per Justia: Expired — Fee Related (maintenance fees not renewed), despite an adjusted expiration of Nov 5, 2027. Featured litigation vs. Trek ABP.",year:2010,highlight:true,note:"Status: EXPIRED — Fee Related (fees lapsed before full term). Litigation: Wisconsin W.D. (3:12-cv-00639) and CAFC (14-1241) vs. Trek Active Braking Pivot."},
+  {id:"US8002301B2",title:"Vehicle Suspension Systems for Separated Acceleration Responses",subLabel:"Split Pivot — Concentric Pivot",platform:"Split Pivot",category:"rear",subcat:"split-pivot",status:"active",filed:"Aug 23, 2007",published:"Aug 23, 2011",expires:"Mar 11, 2028",assignee:"Split Pivot Inc.",brands:["Devinci","Salsa","Rocky Mountain","Norco"],link:"https://patents.google.com/patent/US8002301B2/en",externalLink:"http://www.split-pivot.com/home.html",externalLabel:"split-pivot.com",summary:"Concentric-pivot Split Pivot patent. A pivot concentric to the wheel rotation axis controls braking forces via instant force center placement; a swinging wheel link handles acceleration independently. This separation is the mechanical heart of the Split Pivot system.",year:2011,highlight:true,note:"Active. Expires March 11, 2028. Same litigation family as US7717212."},
+  {id:"DELTA-001",title:"DELTA Rear Suspension System",subLabel:"DELTA — Dave's Extra Legitimate Travel Apparatus",platform:"DELTA System",category:"rear",subcat:"delta",status:"active",filed:"TBD",published:"TBD",expires:"TBD",assignee:"David Weagle / Evil Bikes",brands:["Evil Bikes"],link:"https://evil-bikes.com/blogs/tech-crap/delta",summary:"A compact multi-bar linkage rear suspension using a rocker arm actuated via short links from the swingarm, producing very complex leverage rate curves tunable for varying track conditions, spring type, and damper parameters. Used on Evil Bikes since the company's 1999 founding.",year:2010,highlight:true,asterisk:"The DELTA System does not have a specific standalone design patent publicly indexed under the name 'DELTA suspension.' Mechanical elements may be covered under broader suspension claims. Source: BikeRadar, May 2026. Timeline placement (~2010) is approximate."},
+  {id:"ORION-001",title:"Orion Dynamics Suspension Platform",subLabel:"Orion — Esker & RMU Night Train",platform:"Orion Dynamics",category:"rear",subcat:"orion",status:"active",filed:"TBD",published:"TBD",expires:"TBD",assignee:"David Weagle",brands:["Esker Cycles","RMU (Night Train)"],link:"https://eskercycles.com/pages/orionsuspensiondynamics",externalLink:"https://rmumtnculture.com/products/nighttrain",externalLabel:"RMU Night Train",summary:"Originally designed for a motorcycle chassis, then adapted to mountain bikes. Independently isolates both braking and acceleration forces from suspension movement. The RMU Night Train pairs the Orion Dynamics platform with a dual idler layout for high-pivot chain management.",year:2015,highlight:true,note:"RMU Night Train uses the Orion Dynamics platform with dual idler layout. Specific patent numbers to be confirmed."},
+  {id:"US10549812B2",title:"Inline Gas Spring Shock — Cycle Wheel Suspension",subLabel:"Trust Performance 'Message' Fork — MAIN PATENT",platform:"Trust / Trvstper",category:"front",subcat:"trust",status:"active",filed:"Oct 12, 2018",published:"Feb 4, 2020",expires:"Aug 28, 2037",assignee:"Specialized Bicycle Components",brands:["Trust Performance","Specialized (future)"],link:"https://patents.google.com/patent/US10549812B2/en",summary:"Core patent for the Trust Performance 'Message' linkage front fork. A trailing multi-link suspension with inline gas-spring shock absorber inside the fork arm. Mechanical trail increases as the suspension compresses (opposite of any telescopic fork), yielding growing stability under braking and cornering. The inline spring/damper layout solved the packaging problem that made prior linkage forks impractically large.",year:2020,highlight:true,note:"First commercially successful linkage front fork. Trvstper Inc. IP acquired by Specialized. 11 related filings grouped below — toggle to view."},
+  {id:"US11524744B2",title:"Suspension Assembly with Rotation Sensor",subLabel:null,platform:"Trust / Specialized",category:"front",subcat:"specialized",status:"active",filed:"Apr 9, 2019",published:"Dec 13, 2022",expires:"Apr 9, 2039",assignee:"Specialized Bicycle Components",brands:["Specialized"],link:"https://patents.google.com/patent/US11524744B2/en",summary:"Electronic intelligence added to the linkage fork: a rotation sensor measures angular relationships between links, enabling real-time travel detection and active setpoint adjustment. First step toward smart active suspension on a linkage front fork.",year:2022,highlight:true},
+  {id:"US11820457B2",title:"Cycle Linkage Suspension with Pivot Indicator",subLabel:null,platform:"Trust / Specialized",category:"front",subcat:"specialized",status:"active",filed:"Mar 11, 2022",published:"Nov 21, 2023",expires:"Mar 11, 2042",assignee:"Specialized Bicycle Components",brands:["Specialized"],link:"https://patents.google.com/patent/US11820457B2/en",summary:"Pivot indicator retained by matched features that allow rotation only above a set force threshold — travel monitoring that resists accidental rotation.",year:2023,highlight:false},
+  {id:"US11945539B2",title:"Trailing Link Cycle Wheel Suspension Assembly",subLabel:null,platform:"Trust / Specialized",category:"front",subcat:"specialized",status:"active",filed:"Dec 1, 2020",published:"Apr 2, 2024",expires:"Dec 1, 2040",assignee:"Specialized Bicycle Components",brands:["Specialized"],link:"https://patents.google.com/patent/US11945539B2/en",summary:"Evolved fork architecture with a separate spring unit alongside the inline shock absorber, both housed in the fork arm. Differing gas piston areas enable independent spring and damper tuning within compact inline packaging.",year:2024,highlight:false},
+  {id:"US12258095B2",title:"Smart Suspension Assembly with Rotation Sensor",subLabel:null,platform:"Trust / Specialized",category:"front",subcat:"specialized",status:"active",filed:"Dec 1, 2022",published:"Mar 25, 2025",expires:"Dec 1, 2042",assignee:"Specialized Bicycle Components",brands:["Specialized"],link:"https://patents.google.com/patent/US12258095B2/en",summary:"Continuation of the smart sensor patent. Measured link angles adjust suspension setpoints in real time — active fork geometry control unique to a linkage architecture.",year:2025,highlight:false},
+  {id:"US11273887B2",title:"Cycle Linkage Suspension — Pivot Indicator",subLabel:null,platform:"Trust / Specialized",category:"front",subcat:"specialized",status:"active",filed:"~2020",published:"~2022",expires:"~2040",assignee:"Specialized Bicycle Components",brands:["Specialized"],link:"https://patents.google.com/patent/US11273887B2/en",summary:"Pivot indicator retention system integrated into the linkage fork pivot assembly, providing travel monitoring for the rider.",year:2022,highlight:false,asterisk:"Dates shown are approximate placeholders — verify filing/grant/expiration at USPTO or Google Patents."},
+  {id:"D859125",title:"Cycle Suspension Assembly — Ornamental Design",subLabel:null,platform:"Design",category:"design",subcat:"trust-design",status:"active",filed:"Feb 8, 2018",published:"Sep 10, 2019",expires:"Sep 10, 2034",assignee:"Trvstper → Specialized",brands:["Trust Performance"],link:"https://patents.google.com/patent/USD859125S1/en",summary:"Ornamental design for Trust Performance linkage fork appearance (perspective view).",year:2019,highlight:false},
+  {id:"D860061",title:"Cycle Suspension Assembly — Ornamental Design",subLabel:null,platform:"Design",category:"design",subcat:"trust-design",status:"active",filed:"Feb 8, 2018",published:"Sep 17, 2019",expires:"Sep 17, 2034",assignee:"Trvstper → Specialized",brands:["Trust Performance"],link:"https://patents.google.com/patent/USD860061S1/en",summary:"Ornamental design for Trust Performance fork appearance (alternate view).",year:2019,highlight:false},
+  {id:"D860062",title:"Cycle Suspension Assembly — Ornamental Design",subLabel:null,platform:"Design",category:"design",subcat:"trust-design",status:"active",filed:"Feb 8, 2018",published:"Sep 17, 2019",expires:"Sep 17, 2034",assignee:"Trvstper → Specialized",brands:["Trust Performance"],link:"https://patents.google.com/patent/USD860062S1/en",summary:"Ornamental design for Trust Performance fork appearance (alternate view).",year:2019,highlight:false},
+  {id:"D861542",title:"Cycle Suspension Assembly — Ornamental Design",subLabel:null,platform:"Design",category:"design",subcat:"trust-design",status:"active",filed:"Feb 8, 2018",published:"Oct 1, 2019",expires:"Oct 1, 2034",assignee:"Trvstper → Specialized",brands:["Trust Performance"],link:"https://patents.google.com/patent/USD861542S1/en",summary:"Ornamental design for Trust Performance fork appearance (alternate view).",year:2019,highlight:false},
+  {id:"D880369",title:"Cycle Suspension Assembly — Ornamental Design",subLabel:null,platform:"Design",category:"design",subcat:"trust-design",status:"active",filed:"Feb 8, 2018",published:"Apr 7, 2020",expires:"Apr 7, 2035",assignee:"Trvstper → Specialized",brands:["Trust Performance"],link:"https://patents.google.com/patent/USD880369S1/en",summary:"Ornamental design for Trust Performance fork appearance (alternate view).",year:2020,highlight:false},
+  {id:"D880370",title:"Cycle Suspension Assembly — Ornamental Design",subLabel:null,platform:"Design",category:"design",subcat:"trust-design",status:"active",filed:"Feb 8, 2018",published:"Apr 7, 2020",expires:"Apr 7, 2035",assignee:"Trvstper → Specialized",brands:["Trust Performance"],link:"https://patents.google.com/patent/USD880370S1/en",summary:"Ornamental design for Trust Performance fork appearance (alternate view).",year:2020,highlight:false},
+  {id:"D880371",title:"Cycle Suspension Assembly — Ornamental Design",subLabel:null,platform:"Design",category:"design",subcat:"trust-design",status:"active",filed:"Feb 8, 2018",published:"Apr 7, 2020",expires:"Apr 7, 2035",assignee:"Trvstper → Specialized",brands:["Trust Performance"],link:"https://patents.google.com/patent/USD880371S1/en",summary:"Ornamental design for Trust Performance fork appearance (alternate view).",year:2020,highlight:false},
+  {id:"D880372",title:"Cycle Suspension Assembly — Ornamental Design",subLabel:null,platform:"Design",category:"design",subcat:"trust-design",status:"active",filed:"Feb 8, 2018",published:"Apr 7, 2020",expires:"Apr 7, 2035",assignee:"Trvstper → Specialized",brands:["Trust Performance"],link:"https://patents.google.com/patent/USD880372S1/en",summary:"Ornamental design for Trust Performance fork assembly (alternate view).",year:2020,highlight:false},
+  {id:"APP20220297795",title:"Sequential Adjacent Drive Assembly",subLabel:"High-Pivot Dual-Chain Drivetrain",platform:"High-Pivot Drivetrain",category:"drivetrain",subcat:"drivetrain",status:"pending",filed:"Mar 15, 2022",published:"Sep 22, 2022",expires:"TBD",assignee:"David Weagle",brands:[],link:"https://patents.google.com/patent/US20220297795A1/en",summary:"Two-chain sequential drive for high-pivot bikes: chainring drives an elevated frame-mounted sprocket, which co-axially drives a second chain to the cassette — both chains on the drive side. No idler needed; standard cranks; e-bike compatible. Primary benefit: manufacturing space efficiency around chainstays.",year:2022,highlight:true,note:"Weagle: 'Performance advantages are less than 50% of the patent value — the rest is manufacturing simplification.' — Pinkbike, Jan 2023.",asterisk:"Application status as of original 2022 publication. Four years on, this has likely granted, been abandoned, or continued — verify current status at USPTO before relying on 'Pending.'"},
+  {id:"APP20220297790",title:"Sequential Adjacent Drive — Variant",subLabel:null,platform:"High-Pivot Drivetrain",category:"drivetrain",subcat:"drivetrain",status:"pending",filed:"Mar 15, 2022",published:"Sep 22, 2022",expires:"TBD",assignee:"David Weagle",brands:[],link:"https://patents.google.com/patent/US20220297790A1/en",summary:"Alternate claim set for the sequential adjacent high-pivot dual-chain drive system.",year:2022,highlight:false,asterisk:"Application status as of 2022 publication — verify current status at USPTO."},
+  {id:"APP20220297793",title:"Sequential Adjacent Drive — Variant",subLabel:null,platform:"High-Pivot Drivetrain",category:"drivetrain",subcat:"drivetrain",status:"pending",filed:"Mar 15, 2022",published:"Sep 22, 2022",expires:"TBD",assignee:"David Weagle",brands:[],link:"https://patents.google.com/patent/US20220297793A1/en",summary:"Third claim set for the sequential adjacent high-pivot dual-chain drive assembly.",year:2022,highlight:false,asterisk:"Application status as of 2022 publication — verify current status at USPTO."}
+];
+
+const TRUST_CHILD_DATA = [
+  {id:"US10526040B2",note:"Original 2017 gas spring filing",filed:"Aug 28, 2017",published:"Jan 7, 2020",expires:"Aug 28, 2037",link:"https://patents.google.com/patent/US10526040B2/en",title:"Inline Gas Spring Shock — Cycle Wheel Suspension"},
+  {id:"US10196106B2",note:null,filed:"Jul 27, 2017",published:"Feb 5, 2019",expires:"Aug 28, 2037",link:"https://patents.google.com/patent/US10196106B2/en",title:"Cycle Wheel Suspension Assembly"},
+  {id:"US10300979B2",note:null,filed:"Jul 27, 2017",published:"May 28, 2019",expires:"Aug 28, 2037",link:"https://patents.google.com/patent/US10300979B2/en",title:"Cycle Wheel Suspension Assembly"},
+  {id:"US10308312B2",note:null,filed:"Jul 27, 2017",published:"Jun 4, 2019",expires:"Aug 28, 2037",link:"https://patents.google.com/patent/US10308312B2/en",title:"Cycle Wheel Suspension Assembly"},
+  {id:"US10518839B2",note:"Coil spring variant",filed:"Aug 29, 2017",published:"Dec 31, 2019",expires:"Aug 28, 2037",link:"https://patents.google.com/patent/US10518839B2/en",title:"Inline Coil Spring Shock"},
+  {id:"US10518836B2",note:null,filed:"Oct 12, 2018",published:"Dec 31, 2019",expires:"Aug 28, 2037",link:"https://patents.google.com/patent/US10518836B2/en",title:"Cycle Wheel Suspension Assembly"},
+  {id:"US10526039B2",note:null,filed:"Oct 12, 2018",published:"Jan 7, 2020",expires:"Aug 28, 2037",link:"https://patents.google.com/patent/US10526039B2/en",title:"Cycle Wheel Suspension Assembly"},
+  {id:"US10549813B2",note:"Coil spring variant",filed:"Oct 12, 2018",published:"Feb 4, 2020",expires:"Aug 28, 2037",link:"https://patents.google.com/patent/US10549813B2/en",title:"Inline Coil Spring Shock"},
+  {id:"US10549815B2",note:null,filed:"Oct 12, 2018",published:"Feb 4, 2020",expires:"Aug 28, 2037",link:"https://patents.google.com/patent/US10549815B2/en",title:"Cycle Wheel Suspension Assembly"},
+  {id:"US10689061B2",note:null,filed:"Feb 4, 2019",published:"Jun 23, 2020",expires:"Aug 28, 2037",link:"https://patents.google.com/patent/US10689061B2/en",title:"Cycle Wheel Suspension Assembly"},
+  {id:"US11345432B2",note:null,filed:"Oct 12, 2018",published:"May 31, 2022",expires:"Aug 28, 2037",link:"https://patents.google.com/patent/US11345432B2/en",title:"Multi-Bar Cycle Wheel Suspension Assembly"}
+];
+
+const SUBCATS = {
+  all:[],
+  rear:[{key:"all-rear",label:"All Rear"},{key:"dw-link",label:"DW-Link"},{key:"split-pivot",label:"Split Pivot"},{key:"delta",label:"DELTA"},{key:"orion",label:"Orion"}],
+  front:[{key:"all-front",label:"All Front"},{key:"trust",label:"Trust / Trvstper"},{key:"specialized",label:"Specialized Era"}],
+  drivetrain:[{key:"all-drivetrain",label:"All"},{key:"drivetrain",label:"High-Pivot"}],
+  design:[{key:"all-design",label:"All"},{key:"trust-design",label:"Trust Design"}]
+};
+
+// ── STATE + URL HASH ─────────────────────────────────────────────────────────
+let activeCat="all", activeSubcat="all", searchQuery="", statusFilter="all";
+const expandedRelated = new Set();
+
+function writeHash(){
+  const p=new URLSearchParams();
+  if(activeCat!=="all")p.set('tab',activeCat);
+  if(activeSubcat!=="all"&&!activeSubcat.startsWith('all-'))p.set('sub',activeSubcat);
+  if(statusFilter!=="all")p.set('status',statusFilter);
+  const t=document.documentElement.dataset.theme;
+  if(t!=='evil')p.set('theme',t);
+  const s=p.toString();
+  try{ history.replaceState(null,'',s?('#'+s):location.pathname+location.search); }catch(e){}
+}
+function readHash(){
+  try{
+    const p=new URLSearchParams(location.hash.slice(1));
+    const tab=p.get('tab'); const sub=p.get('sub'); const stat=p.get('status'); const th=p.get('theme');
+    if(th&&['ibis','pivot','evil'].includes(th))setTheme(th,true);
+    if(stat&&['active','expired','pending'].includes(stat))statusFilter=stat;
+    if(tab&&(SUBCATS[tab]||tab==='timeline')){
+      if(tab==='timeline'){selectTab('timeline');return;}
+      activeCat=tab;
+      if(sub)activeSubcat=sub;
+      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active',b.dataset.cat===tab));
+    }
+  }catch(e){}
+}
+
+// ── RENDER ───────────────────────────────────────────────────────────────────
+function sIcon(s){return s==="active"?'<span style="color:var(--sa)">●</span>':s==="expired"?'<span style="color:var(--se)">○</span>':'<span style="color:var(--am)">◆</span>';}
+
+function relToggleHTML(isExp){
+  return `<span id="rel-arrow">${isExp?'▴':'▾'}</span> ${isExp?'Hide':'Show'} ${TRUST_CHILD_DATA.length} related continuation filings`;
+}
+
+function renderCard(p){
+  const st=effectiveStatus(p);
+  const pc=PLATFORM_CLASS[p.platform]||"plat-design";
+  const brands=(p.brands||[]).length?`<div class="brands">${p.brands.map(b=>`<span class="bpill">${b}</span>`).join('')}</div>`:'';
+  const sublbl=p.subLabel?`<div class="sublbl">⟶ ${p.subLabel}</div>`:'';
+  const note=p.note?`<div class="card-note">${p.note}</div>`:'';
+  const ast=p.asterisk?`<div class="ast-note">* ${p.asterisk}</div>`:'';
+  const ext=p.externalLink?`<div class="ext-box">↗ <a href="${p.externalLink}" target="_blank">${p.externalLabel||p.externalLink}</a></div>`:'';
+  const cdHtml=countdownHTML(p);
+  let relatedSection='';
+  if(p.id===TRUST_PARENT){
+    const isExp=expandedRelated.has(TRUST_PARENT);
+    relatedSection=`<div class="related-section">
+      <button class="related-toggle" id="rel-toggle" onclick="toggleRelated()">${relToggleHTML(isExp)}</button>
+      <div class="related-list" id="rel-list" ${isExp?'':'hidden'}>
+        ${TRUST_CHILD_DATA.map(c=>{
+          const cd2=countdownHTML(c);
+          const n=c.note?`<span class="rel-note">(${c.note})</span>`:'';
+          return `<div class="rel-item"><a href="${c.link}" target="_blank">${c.id}</a>${n} — ${c.title}<br><span style="font-size:8px;letter-spacing:.3px">Filed ${c.filed} · Exp ${c.expires} ${cd2}</span></div>`;
+        }).join('')}
+      </div>
+    </div>`;
+  }
+  return `<div class="patent-card cat-${p.category}${p.highlight?' hl':''}" id="card-${p.id}">
+    <div class="card-body">
+      <div class="card-top-row">
+        <div class="pnum">${p.id.startsWith('APP')?'📋 '+p.id.replace('APP',''):p.id}</div>
+        <div class="sbadge ${st}">${sIcon(st)} ${st.charAt(0).toUpperCase()+st.slice(1)}</div>
+      </div>
+      <span class="pbadge ${pc}">${p.platform}</span>
+      <div class="ctitle">${p.title}</div>
+      ${sublbl}${brands}
+      <table class="mt">
+        <tr><td>Filed</td><td>${p.filed}</td></tr>
+        <tr><td>Published</td><td>${p.published}</td></tr>
+        <tr><td>Expires</td><td>${p.expires}${cdHtml}</td></tr>
+        <tr><td>Assignee</td><td>${p.assignee}</td></tr>
+      </table>
+      <div class="csum">${p.summary}</div>
+      ${note}${ast}${ext}
+    </div>
+    ${relatedSection}
+    <div class="card-footer">
+      <a class="btn-p" href="${p.link}" target="_blank">→ Google Patents</a>
+      ${p.externalLink?`<a class="btn-p" href="${p.externalLink}" target="_blank">↗ More Info</a>`:''}
+    </div>
+  </div>`;
+}
+
+// FIXED: rebuilds button innerHTML so the arrow span survives repeated toggles
+function toggleRelated(){
+  const nowOpen=!expandedRelated.has(TRUST_PARENT);
+  if(nowOpen)expandedRelated.add(TRUST_PARENT);else expandedRelated.delete(TRUST_PARENT);
+  const list=document.getElementById('rel-list');
+  const btn=document.getElementById('rel-toggle');
+  if(list)list.hidden=!nowOpen;
+  if(btn)btn.innerHTML=relToggleHTML(nowOpen);
+}
+
+function filterPatents(){
+  let list=[...PATENTS];
+  if(activeCat!=='all')list=list.filter(p=>p.category===activeCat);
+  if(activeSubcat!=='all'&&!activeSubcat.startsWith('all-'))list=list.filter(p=>p.subcat===activeSubcat);
+  if(statusFilter!=='all')list=list.filter(p=>effectiveStatus(p)===statusFilter);
+  if(searchQuery.trim()){
+    const q=searchQuery.toLowerCase();
+    list=list.filter(p=>p.id.toLowerCase().includes(q)||p.title.toLowerCase().includes(q)||p.platform.toLowerCase().includes(q)||(p.brands||[]).some(b=>b.toLowerCase().includes(q))||p.summary.toLowerCase().includes(q)||(p.subLabel||'').toLowerCase().includes(q));
+  }
+  return list;
+}
+
+function renderSubcatPills(){
+  const el=document.getElementById('subcat-pills');
+  const cfg=SUBCATS[activeCat]||[];
+  if(!cfg.length){el.innerHTML='';return;}
+  el.innerHTML=cfg.map(s=>`<button class="pill ${activeSubcat===s.key?'active':''}" data-subcat="${s.key}">${s.label}</button>`).join('');
+  el.querySelectorAll('.pill').forEach(b=>b.onclick=()=>{activeSubcat=b.dataset.subcat;renderSubcatPills();renderGrid();writeHash();});
+}
+
+function toggleStatusFilter(s){
+  statusFilter=(statusFilter===s)?'all':s;
+  renderGrid();writeHash();
+}
+
+function renderGrid(){
+  const grid=document.getElementById('patent-grid');
+  // Counts always computed pre-status-filter so the bar shows real totals
+  let base=[...PATENTS];
+  if(activeCat!=='all')base=base.filter(p=>p.category===activeCat);
+  if(activeSubcat!=='all'&&!activeSubcat.startsWith('all-'))base=base.filter(p=>p.subcat===activeSubcat);
+  const counts={active:0,expired:0,pending:0};
+  base.forEach(p=>counts[effectiveStatus(p)]++);
+  const list=filterPatents();
+  document.getElementById('stats-bar').innerHTML=`
+    <div class="stat-item"><span class="sn">${list.length}</span><span class="sl">shown</span><span class="grouped-note">(+${TRUST_CHILD_DATA.length} grouped under ${TRUST_PARENT})</span></div>
+    <div class="stat-item clickable ${statusFilter==='active'?'filter-on':''}" onclick="toggleStatusFilter('active')" title="Filter: active"><span class="dot-a"></span><span class="sn">${counts.active}</span><span class="sl">active</span></div>
+    <div class="stat-item clickable ${statusFilter==='expired'?'filter-on':''}" onclick="toggleStatusFilter('expired')" title="Filter: expired"><span class="dot-e"></span><span class="sn">${counts.expired}</span><span class="sl">expired</span></div>
+    <div class="stat-item clickable ${statusFilter==='pending'?'filter-on':''}" onclick="toggleStatusFilter('pending')" title="Filter: pending"><span class="dot-p"></span><span class="sn">${counts.pending}</span><span class="sl">pending</span></div>`;
+  if(!list.length){grid.innerHTML='<div class="empty-state">No patents match your filters.</div>';return;}
+  const sorted=[...list].sort((a,b)=>(b.year-a.year)||((b.highlight?1:0)-(a.highlight?1:0)));
+  let html='',lastYear=null;
+  for(const p of sorted){
+    if(p.year!==lastYear){html+=`<div class="year-marker">${p.year}</div>`;lastYear=p.year;}
+    html+=renderCard(p);
+  }
+  grid.innerHTML=html;
+}
+
+// ── EXPIRY BANNER (dynamic "next to expire") ─────────────────────────────────
+function renderExpiryBanner(){
+  const now=new Date();
+  const upcoming=PATENTS.map(p=>({p,d:parseExpiry(p.expires)}))
+    .filter(x=>x.d&&x.d>now)
+    .sort((a,b)=>a.d-b.d).slice(0,3);
+  if(!upcoming.length){document.getElementById('eb-next').innerHTML='';return;}
+  document.getElementById('eb-next').innerHTML='NEXT TO EXPIRE: '+upcoming.map(x=>{
+    const cd=getCountdown(x.d);
+    return `<span class="nx-id">${x.p.id}</span> (${x.p.expires} · ${cd.text})`;
+  }).join(' &nbsp;·&nbsp; ');
+}
+
+// ── TIMELINE ─────────────────────────────────────────────────────────────────
+const GANTT=[
+  {label:'DW-Link / DW4 ★PUBLIC DOMAIN', cat:'rear', s:2006, e:2023, xp:true, nav:{cat:'rear',sub:'dw-link'}},
+  {label:'DW-Link Cont.', cat:'rear', s:2010, e:2024, xp:true, nav:{cat:'rear',sub:'dw-link'}},
+  {label:'Split Pivot Core (fee exp.)', cat:'rear', s:2010, e:2027, xp:true, nav:{cat:'rear',sub:'split-pivot'}},
+  {label:'Split Pivot Concentric', cat:'rear', s:2011, e:2028, nav:{cat:'rear',sub:'split-pivot'}},
+  {label:'DELTA System', cat:'rear', s:2010, unk:true, nav:{cat:'rear',sub:'delta'}},
+  {label:'Orion Dynamics', cat:'rear', s:2015, unk:true, nav:{cat:'rear',sub:'orion'}},
+  {label:'▶ Trust Message + 11 filings', cat:'front', s:2017, e:2037, hl:true, nav:{cat:'front',sub:'trust'}},
+  {label:'Trust Design Patents', cat:'design', s:2018, e:2035, nav:{cat:'design',sub:'trust-design'}},
+  {label:'Specialized Sensors', cat:'front', s:2019, e:2039, nav:{cat:'front',sub:'specialized'}},
+  {label:'Specialized Pivot Ind.', cat:'front', s:2020, e:2040, nav:{cat:'front',sub:'specialized'}},
+  {label:'Specialized Advanced', cat:'front', s:2022, e:2042, nav:{cat:'front',sub:'specialized'}},
+  {label:'High-Pivot Drivetrain', cat:'drivetrain', s:2022, unk:true, nav:{cat:'drivetrain',sub:'drivetrain'}}
+];
+
+function buildHistData(){
+  const hist={};
+  [...PATENTS,...TRUST_CHILD_DATA].forEach(p=>{
+    const yr=p.year||(p.published&&parseInt(p.published.split(',').pop()));
+    if(!yr||yr<2000)return;
+    if(!hist[yr])hist[yr]={rear:0,front:0,drivetrain:0,design:0};
+    const cat=p.category||(p.id.startsWith('D')?'design':'front');
+    if(hist[yr][cat]!==undefined)hist[yr][cat]++;
+  });
+  return hist;
+}
+
+function cssv(n,f){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()||f;}
+
+function renderTimeline(){
+  document.getElementById('tl-legend').innerHTML=Object.entries(CAT_COLOR).map(([k,c])=>
+    `<div class="tl-legend-item"><div class="tl-swatch" style="background:${c}"></div>${CAT_LABEL[k]}</div>`
+  ).join('')+`<div class="tl-legend-item" style="margin-left:8px"><div class="tl-swatch" style="background:#6A7888;opacity:.45"></div>Expired</div>`;
+  const txm=cssv('--txm','#8898B0'),tx=cssv('--tx','#E2DDD4'),bo=cssv('--bo','#2C3848'),ac=cssv('--ac','#E83838');
+  buildHistSVG(txm,tx,bo,ac);
+  buildGanttSVG(txm,tx,bo,ac);
+}
+
+function buildHistSVG(txm,tx,bo,ac){
+  const W=720,H=140,LP=10,RP=20,TP=20,BP=30,CW=W-LP-RP,CH=H-TP-BP;
+  const hist=buildHistData();
+  const years=Array.from({length:21},(_,i)=>2006+i);
+  const maxCount=Math.max(...years.map(y=>Object.values(hist[y]||{}).reduce((a,b)=>a+b,0)),1);
+  const BW=(CW/years.length)*0.7;
+  const toX=y=>LP+(y-years[0])/(years[years.length-1]-years[0])*CW;
+  let s='';
+  years.forEach(yr=>{
+    const x=toX(yr)-BW/2;
+    let yOff=H-BP;
+    ['rear','front','drivetrain','design'].forEach(cat=>{
+      const n=(hist[yr]||{})[cat]||0;
+      if(!n)return;
+      const bh=(n/maxCount)*CH;
+      yOff-=bh;
+      s+=`<rect x="${x.toFixed(1)}" y="${yOff.toFixed(1)}" width="${BW.toFixed(1)}" height="${bh.toFixed(1)}" fill="${CAT_COLOR[cat]}" opacity="0.8" rx="1"><title>${yr} · ${CAT_LABEL[cat]}: ${n}</title></rect>`;
+    });
+    if((yr-2006)%2===0)s+=`<text x="${toX(yr).toFixed(1)}" y="${H-BP+14}" text-anchor="middle" font-size="9" font-family="Space Mono,monospace" fill="${txm}">${yr}</text>`;
+  });
+  s+=`<line x1="${LP}" y1="${H-BP}" x2="${W-RP}" y2="${H-BP}" stroke="${bo}" stroke-width="1"/>`;
+  s+=`<text x="${LP}" y="${TP-4}" font-size="9" font-family="Space Mono,monospace" fill="${txm}">PUBLICATIONS / YEAR (incl. grouped Trust filings)</text>`;
+  document.getElementById('tl-hist').innerHTML=`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" style="width:100%">${s}</svg>`;
+}
+
+function buildGanttSVG(txm,tx,bo,ac){
+  const W=860,LP=185,RP=20,TP=38,BP=28,CW=W-LP-RP;
+  const YS=2003,YE=2044,YR=YE-YS,TODAY=2026+5/12,RH=25,RG=5,ROWS=GANTT.length,H=TP+ROWS*(RH+RG)+BP;
+  const toX=y=>LP+((y-YS)/YR)*CW;
+  let s='';
+  for(let y=2006;y<=2042;y+=3){
+    const x=toX(y);
+    s+=`<line x1="${x.toFixed(1)}" y1="${TP-4}" x2="${x.toFixed(1)}" y2="${H-BP}" stroke="${bo}" stroke-width="0.7" opacity="0.7"/>`;
+    s+=`<text x="${x.toFixed(1)}" y="${TP-8}" text-anchor="middle" font-size="8" font-family="Space Mono,monospace" fill="${txm}">${y}</text>`;
+  }
+  const tx2=toX(TODAY);
+  s+=`<line x1="${tx2.toFixed(1)}" y1="${TP-4}" x2="${tx2.toFixed(1)}" y2="${H-BP}" stroke="${ac}" stroke-width="2" stroke-dasharray="5,3" opacity="0.9"/>`;
+  s+=`<text x="${tx2.toFixed(1)}" y="${TP-8}" text-anchor="middle" font-size="8" font-family="Space Mono,monospace" fill="${ac}" font-weight="700">NOW</text>`;
+  GANTT.forEach((row,i)=>{
+    const y=TP+i*(RH+RG);
+    const x1=toX(row.s);
+    const endYr=row.unk?2042.5:row.e;
+    const x2=toX(endYr);
+    const col=row.xp?'#6A7888':CAT_COLOR[row.cat];
+    const op=row.xp?0.45:row.hl?0.9:0.7;
+    const navAttr=row.nav?`onclick="ganttNav('${row.nav.cat}','${row.nav.sub}')" class="gantt-bar"`:'';
+    s+=`<rect ${navAttr} x="${x1.toFixed(1)}" y="${y}" width="${(x2-x1).toFixed(1)}" height="${RH}" rx="3" fill="${col}" opacity="${op}"><title>${row.label} (${row.s}–${row.unk?'TBD':row.e}${row.xp?' · EXPIRED':''}) — click to view</title></rect>`;
+    if(row.hl)s+=`<rect x="${x1.toFixed(1)}" y="${y}" width="${(x2-x1).toFixed(1)}" height="${RH}" rx="3" fill="none" stroke="${col}" stroke-width="2" pointer-events="none"/>`;
+    if(row.unk){const ax=toX(2041.5);s+=`<polygon points="${ax},${y+RH/2-5} ${ax+10},${y+RH/2} ${ax},${y+RH/2+5}" fill="${col}" opacity="${op}" pointer-events="none"/>`;}
+    s+=`<text x="${LP-8}" y="${y+RH/2+4}" text-anchor="end" font-size="${row.hl?11:10.5}" font-family="Barlow Condensed,sans-serif" fill="${row.hl?tx:txm}" font-weight="${row.hl?'600':'400'}">${row.label}</text>`;
+    const bw=x2-x1;
+    if(bw>55&&!row.unk)s+=`<text x="${(x1+x2)/2}" y="${y+RH/2+3.5}" text-anchor="middle" font-size="8" font-family="Space Mono,monospace" fill="${row.xp?'rgba(220,220,220,0.75)':'rgba(0,0,0,0.6)'}" pointer-events="none">${row.s}–${row.e}</text>`;
+  });
+  s+=`<line x1="${LP}" y1="${H-BP}" x2="${W-RP}" y2="${H-BP}" stroke="${bo}" stroke-width="1"/>`;
+  document.getElementById('tl-gantt').innerHTML=`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" style="width:100%">${s}</svg>`;
+}
+
+// Click a Gantt bar → jump to that category/subcat in the grid
+function ganttNav(cat,sub){
+  selectTab(cat);
+  activeSubcat=sub;
+  renderSubcatPills();
+  renderGrid();
+  writeHash();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ── TABS ─────────────────────────────────────────────────────────────────────
+function selectTab(cat){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active',b.dataset.cat===cat));
+  const isTL=cat==='timeline';
+  document.getElementById('grid-controls').style.display=isTL?'none':'block';
+  document.getElementById('patent-grid').style.display=isTL?'none':'grid';
+  document.getElementById('expiry-banner').style.display=isTL?'none':'block';
+  document.getElementById('timeline-view').classList.toggle('active',isTL);
+  if(isTL){renderTimeline();}
+  else{activeCat=cat;activeSubcat='all';renderSubcatPills();renderGrid();}
+}
+document.getElementById('tabs-row').querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.onclick=()=>{selectTab(btn.dataset.cat);writeHash();};
+});
+
+// ── SEARCH ───────────────────────────────────────────────────────────────────
+document.getElementById('search-input').addEventListener('input',e=>{searchQuery=e.target.value;renderGrid();});
+
+// ── THEME ────────────────────────────────────────────────────────────────────
+function setTheme(t,skipHash){
+  document.documentElement.dataset.theme=t;
+  document.querySelectorAll('.theme-btn').forEach(b=>b.classList.toggle('active',b.textContent.toLowerCase()===t));
+  safeSet('weagle-theme',t);
+  if(document.querySelector('.tab-btn[data-cat="timeline"]')?.classList.contains('active'))renderTimeline();
+  if(!skipHash)writeHash();
+}
+const savedTheme=safeGet('weagle-theme');
+if(['ibis','pivot','evil'].includes(savedTheme))setTheme(savedTheme,true);
+
+// ── SCROLL TOP ───────────────────────────────────────────────────────────────
+window.addEventListener('scroll',()=>document.getElementById('scroll-top').classList.toggle('show',scrollY>400));
+
+// ── INIT ─────────────────────────────────────────────────────────────────────
+readHash();
+renderSubcatPills();
+renderGrid();
+renderExpiryBanner();
+</script>
+</body>
+</html>
     /* ── CARDS ── */
     .patent-card{background:var(--bg-c);border:1px solid var(--boc);border-radius:8px;overflow:hidden;box-shadow:var(--sh);transition:all .22s;display:flex;flex-direction:column}
     .patent-card:hover{background:var(--bg-ch);transform:translateY(-1px);box-shadow:var(--shh)}
