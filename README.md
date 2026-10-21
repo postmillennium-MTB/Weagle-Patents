@@ -270,7 +270,9 @@ Widget code, design, and editorial content:
 © RedFoxRun / PostMillennium MTB, 2026
 ```
 
-You're welcome to fork and adapt this widget for other inventor portfolios or patent catalogs. A credit link back to `postmillennium-mtb.github.io` is appreciated but not required.
+Released under the [PolyForm Noncommercial License 1.0.0](LICENSE): free to use, copy, modify and share for any noncommercial purpose, including forking and adapting this widget for other inventor portfolios or patent catalogs, as long as the `Required Notice:` line in `LICENSE` travels with it. Commercial use needs a separate license; ask through postmillenniumrenaissance.com. The license text controls over this summary.
+
+Earlier versions of this README invited forking and adapting without restriction. Copies obtained under that invitation keep those permissions; this and later versions follow PolyForm Noncommercial 1.0.0.
 
 **This is not legal advice.** Patent status, ownership, and enforceability should always be independently verified through USPTO or qualified patent counsel before making any commercial or manufacturing decisions.
 
